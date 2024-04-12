@@ -1,7 +1,5 @@
 package com.exceptionHandling;
 
-import java.sql.DriverManager;
-
 class DemoException extends Exception{
 	
 }
