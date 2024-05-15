@@ -12,8 +12,21 @@
     <property name="format_sql">true</property>
     <property name="hbm2ddl.auto">update</property>
     <!--  <mapping class="com.learning.Hibernate.Product"/>
-    <mapping class="com.learning.Hibernate.primaryKeyGeneration.Course"/>-->
+    <mapping class="com.learning.Hibernate.primaryKeyGeneration.Course"/>
     
     <mapping class="com.learning.Hibernate.crud.Student"/>
+    <mapping class="com.learning.Hibernate.association.Employee"/>
+    <mapping class="com.learning.Hibernate.association.Address"/>
+    <mapping class="com.learning.Mapping.OneToOne.User"/>
+    <mapping class="com.learning.Mapping.OneToOne.Vehicle"/>
+    
+    <mapping class="com.learning.Mapping.OneToMany.Worker"/>
+    <mapping class="com.learning.Mapping.OneToMany.Account"/>
+     <mapping class="com.learning.Mapping.ManyToMany.Student"/>
+     <mapping class="com.learning.Mapping.ManyToMany.Course"/>-->
+     
+     <mapping class="com.learning.Hibernate.fetchType.Category"/>
+     <mapping class="com.learning.Hibernate.fetchType.Product"/>
+    
   </session-factory>
 </hibernate-configuration>
