@@ -11,6 +11,11 @@
     <property name="show_sql">true</property>
     <property name="format_sql">true</property>
     <property name="hbm2ddl.auto">update</property>
+    
+    <property name="cache.use_second_level_cache">true</property>
+    <property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+    
+    
     <!--  <mapping class="com.learning.Hibernate.Product"/>
     <mapping class="com.learning.Hibernate.primaryKeyGeneration.Course"/>
     
@@ -23,10 +28,14 @@
     <mapping class="com.learning.Mapping.OneToMany.Worker"/>
     <mapping class="com.learning.Mapping.OneToMany.Account"/>
      <mapping class="com.learning.Mapping.ManyToMany.Student"/>
-     <mapping class="com.learning.Mapping.ManyToMany.Course"/>-->
+     <mapping class="com.learning.Mapping.ManyToMany.Course"/>
      
      <mapping class="com.learning.Hibernate.fetchType.Category"/>
      <mapping class="com.learning.Hibernate.fetchType.Product"/>
+     
+     <mapping class="com.learning.Hibernate.lifeCycle.Vehicle"/>
+     <mapping class="com.learning.Hibernate.caching.Employee"/>-->
+     <mapping class="com.learning.Hibernate.second_level_caching.Student"/>
     
   </session-factory>
 </hibernate-configuration>
