@@ -34,8 +34,9 @@
      <mapping class="com.learning.Hibernate.fetchType.Product"/>
      
      <mapping class="com.learning.Hibernate.lifeCycle.Vehicle"/>
-     <mapping class="com.learning.Hibernate.caching.Employee"/>-->
-     <mapping class="com.learning.Hibernate.second_level_caching.Student"/>
+     <mapping class="com.learning.Hibernate.caching.Employee"/>
+     <mapping class="com.learning.Hibernate.second_level_caching.Student"/>-->
+     <mapping class="com.learning.Hibernate.HQL.Product"/>
     
   </session-factory>
 </hibernate-configuration>
