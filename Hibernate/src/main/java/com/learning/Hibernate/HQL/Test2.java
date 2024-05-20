@@ -83,7 +83,7 @@ public class Test2 {
 		//getProductById(105, session);
         //sortedProduct(session);
 		//updateProduct(105, 20000, session);
-		deleteProduct(105, session);
+		deleteProduct(105 , session);
 	}
 
 }

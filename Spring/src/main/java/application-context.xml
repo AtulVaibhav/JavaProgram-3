@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="airtel" class="com.learning.Spring.Airtel"/>
+    <bean id="jio" class="com.learning.Spring.JIO"/>
+    
+    <bean id="network" class="com.learning.Spring.Sim">
+     <constructor-arg ref="jio"/>
+    </bean>
+    
+    <!-- Constructor Injection -->
+    
+    <bean id="student" class="com.learning.Spring.constructorInjection_I.Student">
+       <constructor-arg value="101"/>
+       <constructor-arg value="Harsh"/>
+    </bean>
+    <bean id="student1" class="com.learning.Spring.constructorInjection_I.Student">
+       <constructor-arg value="102"/>
+       <constructor-arg value="Amit"/>
+    </bean>
+    
+    
+    <bean id="addr" class="com.learning.Spring.constructorInjection_II.Address">
+      <constructor-arg value="Bhopal"/>
+      <constructor-arg value="MP"/>
+    </bean>
+    <bean id="st" class="com.learning.Spring.constructorInjection_II.Student">
+    <constructor-arg value="101"/>
+    <constructor-arg value="Varun"/>
+    <constructor-arg ref="addr"/>
+    </bean>
+    
+    
+    <bean id="st1" class="com.learning.Spring.constructorInjection_III.Student">
+     <constructor-arg value="1001"/>
+     <constructor-arg value="Amit"/>
+     <constructor-arg>
+       <list>
+         <value>Java</value>
+         <value>Web</value>
+         <value>CyberSecurity</value>
+       </list>
+     </constructor-arg>
+    
+    </bean>
+    
+      <bean id="addr1" class="com.learning.Spring.constructorInjection_IV.Address">
+      <constructor-arg value="Bhopal"/>
+      <constructor-arg value="MP"/>
+    </bean>
+    
+    <bean id="addr2" class="com.learning.Spring.constructorInjection_IV.Address">
+      <constructor-arg value="Bangalore"/>
+      <constructor-arg value="Karnataka"/>
+    </bean>
+    
+    <bean id="st3" class="com.learning.Spring.constructorInjection_IV.Student">
+    <constructor-arg value="2001"/>
+    <constructor-arg value="Vivek"/>
+    
+    <constructor-arg>
+    <list>
+      <ref bean="addr1"/>
+      <ref bean="addr2"/>
+      </list>
+    </constructor-arg>
+    </bean>
+    
+
+</beans>
