@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+<!--  
     <bean id="airtel" class="com.learning.Spring.Airtel"/>
     <bean id="jio" class="com.learning.Spring.JIO"/>
     
@@ -11,7 +11,7 @@
      <constructor-arg ref="jio"/>
     </bean>
     
-    <!-- Constructor Injection -->
+   
     
     <bean id="student" class="com.learning.Spring.constructorInjection_I.Student">
        <constructor-arg value="101"/>
@@ -69,5 +69,76 @@
     </constructor-arg>
     </bean>
     
+   
+    <bean id="s1" class="com.learning.Spring.setterInjection_I.Student">
+    <property name="studentId" value="101"/>
+    <property name="studentName" value="Harsh"/>
+    </bean>
+    
+    
+    <bean id="addr" class="com.learning.Spring.setterInjection_II.Address">
+    <property name="city" value="Bangalore"/>
+    <property name="state" value="Karnataka"/>
+    </bean>
+    <bean id="s2" class="com.learning.Spring.setterInjection_II.Student">
+    <property name="studentId" value="101"/>
+    <property name="studentName" value="Harsh"/>
+    <property name="addr" ref="addr"></property>
+    </bean>
+    
+    <bean id="s3" class="com.learning.Spring.setterInjection_III.Student">
+    <property name="studentId" value="101"/>
+    <property name="studentName" value="Harsh"/>
+    <property name="courses">
+     <list>
+       <value>Java</value>
+       <value>Web</value>
+     </list>
+    </property>
+    </bean>
+    
+     <bean id="a1" class="com.learning.Spring.setterInjection_IV.Address">
+    <property name="city" value="Bangalore"/>
+    <property name="state" value="Karnataka"/>
+    </bean>
+    
+    <bean id="a2" class="com.learning.Spring.setterInjection_IV.Address">
+    <property name="city" value="Bhopal"/>
+    <property name="state" value="MP"/>
+    </bean>
+    
+    
+    <bean id="s4" class="com.learning.Spring.setterInjection_IV.Student">
+    <property name="studentId" value="101"/>
+    <property name="studentName" value="Harsh"/>
+    <property name="addr">
+    
+     <list>
+       <ref bean="a1"/>
+        <ref bean="a2"/>
+     </list>
+    
+    </property>
+    </bean>
+    
+    <bean id="p1" class="com.learning.Spring.autowire_I.Product">
+    <property name="productId" value="101"/>
+    <property name="productName" value="Samsung-34fg"/>
+    </bean>
+    
+    <bean id="category" class="com.learning.Spring.autowire_I.Category"  autowire="byType">
+    <property name="categoryId" value="2001"/>
+    <property name="categoryName" value="Mobile"/>
+    
+    </bean>
+    
+    <bean id="box" class="com.learning.Spring.beanCreation.Box" lazy-init="true"/>
+    
+    
+    <bean id="vehicle" class="com.learning.Spring.beanScope.Vehicle" scope="prototype"/>-->
+    
+    <bean id="box" class="com.learning.Spring.beanLifeCycle.Box">
+    <property name="width" value="100"></property>
+    </bean>
 
 </beans>
